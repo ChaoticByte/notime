@@ -6,12 +6,10 @@ notime is a simple python library that represents the daytime on a scale of `0` 
 
 ```python
 >>> from notime import notime
->>> a = notime(10000)
->>> a
-10000
->>> b = notime.from_time(15, 30, 0, 0)
+>>> a = notime(50000000)
+>>> b = notime.from_time(12, 5, 0, 0)
 >>> b
-64583333
+50347222
 >>> a + b
-64593333
+347222
 ```
