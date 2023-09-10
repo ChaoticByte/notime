@@ -41,14 +41,17 @@ class notime:
     def __int__(self):
         return self.value
 
+    def __float__(self):
+        return float(self.value)
+
     def __add__(self, value:int):
-        return self.__class__(self.value + value)
+        return self.__class__(float(self.value) + float(value))
 
     def __sub__(self, value:int):
-        return self.__class__(self.value - value)
+        return self.__class__(float(self.value) - float(value))
 
     def __mul__(self, value:int):
-        return self.__class__(self.value * value)
+        return self.__class__(float(self.value) * float(value))
 
     def __truediv__(self, value:float):
         return self.__class__(float(self.value) / float(value))
@@ -57,16 +60,16 @@ class notime:
         return self.__class__(float(self.value) ** float(value))
 
     def __eq__(self, value:int):
-        return self.value == value
+        return self.value == float(value)
 
     def __gt__(self, value:int):
-        return self.value > value
+        return self.value > float(value)
 
     def __ge__(self, value:int):
-        return self.value >= value
+        return self.value >= float(value)
 
     def __lt__(self, value:int):
-        return self.value < value
+        return self.value < float(value)
 
     def __le__(self, value:int):
-        return self.value <= value
+        return self.value <= float(value)
